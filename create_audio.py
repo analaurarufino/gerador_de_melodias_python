@@ -47,22 +47,22 @@ def get_chord_data(chords):
     return chord_data.astype(np.int16)
 
 
-def main():
+def create_solo(music_notes):
     #Notes of "twinkle twinkle little star"
-    music_notes = 'D-C-B-E-G-A-G-E-G-D-C-B-E-G-A-G-E-G-D-C-B-E-G-A-G-E-G'
+    # music_notes = 'D-C-B-E-G-A-G-E-G-D-C-B-E-G-A-G-E-G-D-C-B-E-G-A-G-E-G'
     data = get_song_data(music_notes)
     data = data * (16300/np.max(data))
-    write('twinkle-twinklee.wav', samplerate, data.astype(np.int16))
+    write('audio.wav', samplerate, data.astype(np.int16))
     
     #Playing chords
-    chords = 'EgB-DfA-AcE-BDf-gAcE-fAc'
-    data = get_chord_data(chords)
-    data = data * (16300/np.max(data))
-    data = np.resize(data, (len(data)*5,))
-    write('exp-C-Major.wav', samplerate, data.astype(np.int16))
+    # chords = 'EgB-DfA-AcE-BDf-gAcE-fAc'
+    # data = get_chord_data(chords)
+    # data = data * (16300/np.max(data))
+    # data = np.resize(data, (len(data)*5,))
+    # write('exp-C-Major.wav', samplerate, data.astype(np.int16))
     
 if __name__=='__main__':
-    main()
+    # main()
     audios = ['exp-C-Major.wav', 'twinkle-twinklee.wav']
     wav_file_1 = AudioSegment.from_file('exp-C-Major.wav')  
     wav_file_2 = AudioSegment.from_file('twinkle-twinklee.wav') 
