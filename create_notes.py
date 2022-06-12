@@ -1,13 +1,25 @@
-def pattern(Chord):
-    chords_patter = ["S32", "2S65", "S735", "1"] 
-    auxString = Chord
-    print(auxString)
-    i = 0
-    while(not auxString.isnumeric()):
-        # index = auxString.find(Chord)
-        auxString = auxString.replace(Chord, chords_patter[i])
-        i += 1
-    print(auxString)
+import random
+
+def pattern():
+    stringChords = "S"
+    chords_patter = [
+        "S321", 
+        "2S65", 
+        "S357653", 
+        "S514131", 
+        "4321765S", 
+        "1235665S", 
+        "61123S", 
+        "12343S",
+    ]  
+    random.shuffle(chords_patter)
+
+    while(not stringChords.isnumeric()):
+        if(len(chords_patter) != 0):
+            stringChords = stringChords.replace("S", chords_patter.pop())
+        else:
+            stringChords = stringChords.replace("S", "1")
+    print(stringChords)
     
 if __name__ == '__main__':
-    pattern('S')
+    pattern()
