@@ -1,3 +1,4 @@
+from dataclasses import replace
 import random
 
 def pattern():
@@ -13,12 +14,11 @@ def pattern():
         "12343S",
     ]  
     random.shuffle(chords_patter)
+    while(not stringChords.isnumeric() and len(stringChords) < 44):
+        stringChords = stringChords.replace("S", chords_patter.pop())
 
-    while(not stringChords.isnumeric()):
-        if(len(chords_patter) != 0):
-            stringChords = stringChords.replace("S", chords_patter.pop())
-        else:
-            stringChords = stringChords.replace("S", "1")
+    if("S" in stringChords):
+        stringChords = stringChords.replace("S", "1")
     print(stringChords)
     
 if __name__ == '__main__':

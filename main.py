@@ -13,8 +13,9 @@ if __name__=='__main__':
     Note = input("Digite o tom do sem Solo:")
     if(input_check(Note)):
         create_notes.pattern()
-        create_audio.create_solo("D-C-B-E-G-G-C-C-E-C-E-D-A-G-D-F-E-C-A-G")
-        create_audio.play_audio("audio.wav")
+        #6112312343212356654321765132165357653514131
+        create_audio.create_solo("A-C-C-D-E-C-D-E-F-E-D-A-D-E-G-A-A-G-F-E-D-C-B-A-G-C-E-D-C-A-G-E-G-B-A-G-E-G-C-F-C-E-C")
+        #create_audio.play_audio("audio.wav")
     else:
         print("Entrada inválida")
     #Função que recebe uma string de numeros e o tom e retorna uma string de notas 
