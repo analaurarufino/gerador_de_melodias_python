@@ -19,7 +19,7 @@ def pattern():
             stringChords = stringChords.replace("S", chords_patter.pop())
         else:
             stringChords = stringChords.replace("S", "1")
-    print(stringChords)
+    return stringChords
     
 if __name__ == '__main__':
     pattern()
