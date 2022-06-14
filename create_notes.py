@@ -11,6 +11,8 @@ def pattern():
         "1235665S", 
         "61123S", 
         "12343S",
+        "312352S",
+        "6712176S"
     ]  
     random.shuffle(chords_patter)
 

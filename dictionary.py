@@ -1,6 +1,3 @@
-
-
-
 def convert(string, note):
     if note == 'C':
         notes = [{ 
@@ -126,11 +123,7 @@ def convert(string, note):
     for i in string: 
         string = string.replace(i,notes[0][int(i)])
     string = string + notes[0][1]
-       # print(notes[0][int(i)])
-    #print(string)
+    print("Solo gerado >>", string)
     return string
 
-#dar um jeito de por aletaoriamente mais de um tracinho na string
-#convert('123456', 'F')
 
-#convert('123456', 'C')
